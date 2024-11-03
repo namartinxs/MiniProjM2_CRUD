@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Dancing+Script:wght@400..700&family=Krona+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+body{
+    
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: "Comfortaa", serif;
+    gap: 16px; 
+}
+
+.rotas{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 0;
+    width: 100%;
+    background-color: palevioletred;
+    
+    
+}
+
+.rotas a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding:  8px 16px;
+    transition: background-color 0.3s ease;;
+}
+.rotas a:hover{
+    background-color:#d472a1; /* Cor de fundo ao passar o mouse */
+    border-radius: 4px; ;
+} 
+
+.titulacaoProcedimentos{
+
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    text-align: left;
+    margin-bottom: 20px;
+    margin-left: 40px;
+    margin-top: 10px;
+    font-size: 3rem;
+    
+}
+
+.titulacaoProcedimentos h1{
+    font-family: "Dancing Script", cursive;
+    
+    
+}
+
+.home{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    font-family: "Dancing Script", cursive;
+    font-size: 6rem;
+    
+    
+} 
+
+.subtitulo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    margin-top: -16px;
+    gap: 4px;
+   
+}
+
+.subtitulo p{
+    font-size: 1rem;
+}
+#p1{
+    margin-top: 50px;
+    margin-left: -14px;
+
+} 
+
+.informacoes{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:8px;
+    font-size: 1.2rem;
+}
+
+.redes{
+    margin-right: 25px;
+    margin-top: 100px;
+    display: flex;
+    justify-content: right;
+}
+.titulacaoProcedimentos h1{
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+.titulacaoProcedimentos p{
+    font-size: 1rem;
+    color: #666;
+    margin-left: 20px;
+}
+
+.titulacaoAgendamentos{
+    display: flex;/*deixa na horizontal*/
+    flex-direction: column;/*põe um abaixo do outro*/
+    gap: 16px;
+    margin-left: 16px;
+}
+.procedimentos{
+    margin-left: 25%;
+    margin-right: 25%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: space-between;
+}
+
+.cartao{
+    padding: 8px;
+    flex-wrap: wrap;
+    background-color: #fff;
+    width: calc(25%-16px);/* 25% da largura do contêiner menos o espaço entre os itens */
+    border-radius: 12px;
+    box-shadow: 4px 4px 12px #aaa;
+    box-sizing: border-box;
+    height: 283px;
+}
+
+.cartao img{
+    margin-left: 6px;
+    height: 160px;
+    width: 160px;
+}
+
+.cartao h2{
+    display: flex;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.cartao h3{
+    margin-left: 4px;
+    margin-right: 3px;
+    margin-bottom: 10px;
+    font-size: .8rem;
+    color: #aaa;
+}
+
+.cartao button{
+    
+    margin-left: 20px;
+    margin-top: 8px;
+    background-color: palevioletred;
+    height: 30px;
+    border: none;
+    padding: 4px;
+    width: 80%;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+}
