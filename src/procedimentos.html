@@ -8,108 +8,140 @@
 </head>
 <body>
     <nav class="rotas">
-        <a href="index.html">Home</a>
+
         <a href="procedimentos.html">Procedimetos</a>
         <a href="agendamentos.html">Agendamentos</a>
-        <a href="clientes.html">Clientes</a>
+ 
     </nav>
  
     <div class="titulacaoProcedimentos">
-    
         <h1>Procedimetos</h1>
         <p>Médicos e Esteticos</p>
     </div>
+    <div class="home">
+        <p>L</p>
+        <p id="p1">B</p>
+      
+    </div> 
+    <div class="subtitulo">
+        <span>Luxos de Bicho</span> 
+        <p>Veterinaria e PetShop</p>     
+    </div> 
 
     <div class="procedimentos">
+     
         <div class="cartao">
-            <img src="assets/imagens/estetico.png" alt="">   
-
+            <img src="assets/imagens/estetico.png" alt="">
             <div class="titulo">
                 <h2>Banho</h2>
                 <h3>Lorem ipsum dolor sit amet</h3>
                 <span>R$00,00</span>
-                <button>Agendar</button>
+                <button onclick="openModal('Estético', 'Banho')">Agendar</button>
             </div>
         </div>
+    
 
         <div class="cartao">
-            <img src="assets/imagens/estetico.png" alt="">   
-            
+            <img src="assets/imagens/estetico.png" alt="">
             <div class="titulo">
                 <h2>Tosa</h2>
                 <h3>Lorem ipsum dolor sit amet</h3>
                 <span>R$00,00</span>
-                <button>Agendar</button>
+                <button onclick="openModal('Estético', 'Tosa')">Agendar</button>
             </div>
         </div>
+    
 
         <div class="cartao">
-            <img src="assets/imagens/estetico.png" alt="">   
-            
+            <img src="assets/imagens/estetico.png" alt="">
             <div class="titulo">
-                <h2>Banho e tosa</h2>
+                <h2>Banho e Tosa</h2>
                 <h3>Lorem ipsum dolor sit amet</h3>
                 <span>R$00,00</span>
-                <button>Agendar</button>
+                <button onclick="openModal('Estético', 'Banho e Tosa')">Agendar</button>
             </div>
         </div>
 
         <div class="cartao">
-            <img src="assets/imagens/estetico.png" alt="">   
-            
+            <img src="assets/imagens/estetico.png" alt="">
             <div class="titulo">
                 <h2>Unhas</h2>
                 <h3>Lorem ipsum dolor sit amet</h3>
                 <span>R$00,00</span>
-                <button>Agendar</button>
+                <button onclick="openModal('Estético', 'Unhas')">Agendar</button>
             </div>
-        </div> 
-
+        </div>
 
         <div class="cartao">
-            <img src="assets/imagens/medico.png" alt="">   
-            
+            <img src="assets/imagens/medico.png" alt="">
             <div class="titulo">
                 <h2>Consulta</h2>
                 <h3>Lorem ipsum dolor sit amet</h3>
                 <span>R$00,00</span>
-                <button>Agendar</button>
+                <button onclick="openModal('Médico', 'Consulta')">Agendar</button>
             </div>
         </div>
+    
 
         <div class="cartao">
-            <img src="assets/imagens/medico.png" alt="">   
-            
+            <img src="assets/imagens/medico.png" alt="">
             <div class="titulo">
                 <h2>Raio-X</h2>
                 <h3>Lorem ipsum dolor sit amet</h3>
                 <span>R$00,00</span>
-                <button>Agendar</button>
+                <button onclick="openModal('Médico', 'Raio-X')">Agendar</button>
             </div>
-        </div> 
-
+        </div>
+    
         <div class="cartao">
-            <img src="assets/imagens/medico.png" alt="">   
-            
+            <img src="assets/imagens/medico.png" alt="">
             <div class="titulo">
                 <h2>Ultrassom</h2>
                 <h3>Lorem ipsum dolor sit amet</h3>
                 <span>R$00,00</span>
-                <button>Agendar</button>
+                <button onclick="openModal('Médico', 'Ultrassom')">Agendar</button>
             </div>
         </div>
-
+    
         <div class="cartao">
-            <img src="assets/imagens/medico.png" alt="">   
-            
+            <img src="assets/imagens/medico.png" alt="">
             <div class="titulo">
                 <h2>Vacina</h2>
                 <h3>Lorem ipsum dolor sit amet</h3>
                 <span>R$00,00</span>
-                <button>Agendar</button>
+                <button onclick="openModal('Médico', 'Vacina')">Agendar</button>
             </div>
         </div>
     </div>
+    <div class="modal-container">
+        <div class="modal-content">
+            <h2 id="modalTitle">Novo Agendamento</h2>
+
+            <input type="hidden" id="userId">
+            
+            <label for="nome-tutor">Nome do Tutor</label>
+            <input type="text" id="nome-tutor" required>
+
+            <label for="nome-paciente">Nome do Paciente</label>
+            <input type="text" id="nome-paciente" required>
+
+            <label for="horario">Horário</label>
+            <input type="text" id="horario" required>
+
+            <label for="procedimento">Procedimento</label>
+            <input type="text" id="procedimento" required>
+
+            <label for="descricao">Descrição</label>
+            <input type="text" id="descricao" required>
+
+            <label for="telefone">Telefone</label>
+            <input type="text" id="telefone" required>
+
+            <button onclick="salvar()">Salvar</button>
+            <button onclick="closeModal()">Cancelar</button>
+        </div>
+    </div>
+    
     <script src="/src/js/index.js"></script>
 </body>
 </html>
