@@ -2,8 +2,21 @@ let atendimentos = [];
 const modal = document.querySelector('.modal-container');
 const userTable = document.getElementById('userTable');
 //é importante manter o id com o valor do local storage sem usar um número chapado para que ao recarregar a pagina o numero nao reinicie 
-let contadorId = localStorage.getItem('contadorId') ? parseInt(localStorage.getItem('contadorId')) : 1;
+let contadorId = localStorage.getItem('contadorId') ? parseInt(localStorage.getItem('contadorId')) : 0;
 
+
+class Atendimento {
+    constructor(tutor, paciente, horario, procedimento, descricao, telefone) {
+        this.id = contadorId++;
+        this.tutor = tutor;
+        this.paciente = paciente;
+        this.horario = horario;
+        this.procedimento = procedimento;
+        this.descricao = descricao;
+        this.telefone = telefone;
+    }
+
+}
 
 // abre o modal
 function openModal(procedimento, descricao, isEdit = false) {
@@ -82,27 +95,21 @@ function salvar() {
 
     if (id) {
         updateAtendimento(parseInt(id), tutor, paciente, horario, procedimento, descricao, telefone);
+        
     } else {
         createAtendimento(tutor, paciente, horario, procedimento, descricao, telefone);
+        
     }
 
     closeModal();
     loadAtendimentos();
+    
 }
 
 
 function createAtendimento(tutor, paciente, horario, procedimento, descricao, telefone) {
-    const novoAtendimento = {
-        id: contadorId++, 
-        tutor,
-        paciente,
-        horario,
-        procedimento,
-        descricao,
-        telefone
-    };
-
-    
+    const novoAtendimento = new Atendimento(tutor, paciente, horario, procedimento, descricao, telefone);
+        
     const atendimentos = JSON.parse(localStorage.getItem('atendimentos')) || [];
     atendimentos.push(novoAtendimento);
 
@@ -116,6 +123,7 @@ function deleteAtendimento(id) {
     atendimentos = atendimentos.filter(atd => atd.id !== id);
     localStorage.setItem('atendimentos', JSON.stringify(atendimentos)); 
     loadAtendimentos(); 
+    alert("Excluído com sucesso!")
 }
 
 
@@ -132,7 +140,10 @@ function updateAtendimento(id, tutor, paciente, horario, procedimento, descricao
 
         
         localStorage.setItem('atendimentos', JSON.stringify(atendimentos));
+        
     }
+    
+    
 }
 
 // edit
@@ -149,9 +160,9 @@ function editAtendimento(id) {
         document.getElementById('descricao').value = atendimento.descricao;
         document.getElementById('telefone').value = atendimento.telefone;
         openModal(atendimento.procedimento, atendimento.descricao, true);
-    }
+    } 
 
-   
+
 }
 
 
@@ -161,4 +172,4 @@ document.addEventListener("DOMContentLoaded", function() {
 
 });
 
-const conta = 0
+

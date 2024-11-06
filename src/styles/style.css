@@ -181,6 +181,11 @@ body{
   font-weight: bold;
 }
 
+.cartao button:hover{
+  background-color: #3179b8;/* #d472a1; Cor de fundo ao passar o mouse */
+  border-radius: 4px; 
+  
+}
 
 .modal-container{
   display: none;/*fica invisivel de arrancada*/
@@ -235,7 +240,7 @@ body{
 
 .modal-content button:hover{
   background-color: #3179b8;/* #d472a1; Cor de fundo ao passar o mouse */
-  border-radius: 4px; ;
+  border-radius: 4px; 
 }
 
 #modalTitle{
@@ -243,6 +248,7 @@ body{
   margin-bottom: 2px;
 }
 /*tabela*/
+
 .divTable{
   width: 90%;
   margin: 0 auto;
@@ -253,6 +259,24 @@ body{
   overflow-x: auto;
 }
 
+#userTable button{
+  margin-left: 20px;
+  margin-top: 8px;
+  background-color: palevioletred;
+  height: 25px;
+  border: none;
+  padding: 4px;
+  width: 40%;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+#userTable button:hover{
+  background-color: #3179b8;/* #d472a1; Cor de fundo ao passar o mouse */
+  border-radius: 4px; 
+  
+}
 table{
   width: 100%;
   border-collapse: collapse;/*sem espaço na borda das células*/
