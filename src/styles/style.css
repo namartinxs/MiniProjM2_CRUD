@@ -35,14 +35,14 @@ body{
   transition: background-color 0.3s ease;;
 }
 .rotas a:hover{
-  background-color:#d472a1; /* Cor de fundo ao passar o mouse */
+  background-color: #3179b8;/* #d472a1; Cor de fundo ao passar o mouse */
   border-radius: 4px; ;
 } 
 
 
 
 .home{
-  margin-top: 10px;
+  margin-top: -55px;
   display: flex;
   justify-content: center;
   font-family: "Dancing Script", cursive;
@@ -119,7 +119,7 @@ body{
   display: flex;/*deixa na horizontal*/
   flex-direction: column;/*põe um abaixo do outro*/
   gap: 16px;
-  margin-left: 16px;
+  margin-left: 40px;
 }
 
 .titulacaoAgendamentos h1{
@@ -197,20 +197,51 @@ body{
 
 
 .modal-content {
-  margin-top: 6px;
-  display: flex;
-  flex-direction: column;
-  
+  margin-top: 10px;
   background: white;
   padding: 20px;
   border-radius: 5px;
   width: 400px;
   height: 300px;
   max-width: 90%;
+  
 }
 
+.modal-content input{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 100px;
+  margin-bottom: 8px;
+  
+}
 
+.modal-content label{
+  margin-left: 100px;
+}
 
+.modal-content button{
+  margin-left: 16px;
+  margin-top: 8px;
+  background-color: palevioletred;
+  height: 20px;
+  border: none;
+  width: 20%;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.modal-content button:hover{
+  background-color: #3179b8;/* #d472a1; Cor de fundo ao passar o mouse */
+  border-radius: 4px; ;
+}
+
+#modalTitle{
+  font-size: 20px;
+  margin-bottom: 2px;
+}
 /*tabela*/
 .divTable{
   width: 90%;

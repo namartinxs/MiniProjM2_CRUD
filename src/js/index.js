@@ -160,3 +160,5 @@ document.addEventListener("DOMContentLoaded", function() {
     loadAtendimentos(); 
 
 });
+
+const conta = 0

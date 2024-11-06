@@ -9,8 +9,8 @@
 <body>
     <nav class="rotas">
 
-        <a href="procedimentos.html">Procedimetos</a>
-        <a href="agendamentos.html">Agendamentos</a>
+        <a href="/src/pages/procedimentos.html">Procedimetos</a>
+        <a href="/src/pages/agendamentos.html">Agendamentos</a>
  
     </nav>
  
@@ -25,13 +25,13 @@
     </div> 
     <div class="subtitulo">
         <span>Luxos de Bicho</span> 
-        <p>Veterinaria e PetShop</p>     
+        <p>Veterinária e PetShop</p>     
     </div> 
 
     <div class="procedimentos">
      
         <div class="cartao">
-            <img src="assets/imagens/estetico.png" alt="">
+            <img src="/src/assets/imagens/estetico.png" alt="">
             <div class="titulo">
                 <h2>Banho</h2>
                 <h3>Lorem ipsum dolor sit amet</h3>
@@ -42,7 +42,7 @@
     
 
         <div class="cartao">
-            <img src="assets/imagens/estetico.png" alt="">
+            <img src="/src/assets/imagens/estetico.png" alt="">
             <div class="titulo">
                 <h2>Tosa</h2>
                 <h3>Lorem ipsum dolor sit amet</h3>
@@ -53,7 +53,7 @@
     
 
         <div class="cartao">
-            <img src="assets/imagens/estetico.png" alt="">
+            <img src="/src/assets/imagens/estetico.png" alt="">
             <div class="titulo">
                 <h2>Banho e Tosa</h2>
                 <h3>Lorem ipsum dolor sit amet</h3>
@@ -63,7 +63,7 @@
         </div>
 
         <div class="cartao">
-            <img src="assets/imagens/estetico.png" alt="">
+            <img src="/src/assets/imagens/estetico.png" alt="">
             <div class="titulo">
                 <h2>Unhas</h2>
                 <h3>Lorem ipsum dolor sit amet</h3>
@@ -73,7 +73,7 @@
         </div>
 
         <div class="cartao">
-            <img src="assets/imagens/medico.png" alt="">
+            <img src="/src/assets/imagens/medico.png" alt="">
             <div class="titulo">
                 <h2>Consulta</h2>
                 <h3>Lorem ipsum dolor sit amet</h3>
@@ -84,7 +84,7 @@
     
 
         <div class="cartao">
-            <img src="assets/imagens/medico.png" alt="">
+            <img src="/src/assets/imagens/medico.png" alt="">
             <div class="titulo">
                 <h2>Raio-X</h2>
                 <h3>Lorem ipsum dolor sit amet</h3>
@@ -94,7 +94,7 @@
         </div>
     
         <div class="cartao">
-            <img src="assets/imagens/medico.png" alt="">
+            <img src="/src/assets/imagens/medico.png" alt="">
             <div class="titulo">
                 <h2>Ultrassom</h2>
                 <h3>Lorem ipsum dolor sit amet</h3>
@@ -104,7 +104,7 @@
         </div>
     
         <div class="cartao">
-            <img src="assets/imagens/medico.png" alt="">
+            <img src="/src/assets/imagens/medico.png" alt="">
             <div class="titulo">
                 <h2>Vacina</h2>
                 <h3>Lorem ipsum dolor sit amet</h3>
@@ -114,32 +114,36 @@
         </div>
     </div>
     <div class="modal-container">
+
         <div class="modal-content">
-            <h2 id="modalTitle">Novo Agendamento</h2>
+            <form onsubmit="return salvar()">
+                <h2 id="modalTitle">Novo Agendamento</h2>
 
-            <input type="hidden" id="userId">
-            
-            <label for="nome-tutor">Nome do Tutor</label>
-            <input type="text" id="nome-tutor" required>
+                <input type="hidden" id="userId">
+                
+                <label for="nome-tutor">Nome do Tutor</label>
+                <input type="text" id="nome-tutor" required>
 
-            <label for="nome-paciente">Nome do Paciente</label>
-            <input type="text" id="nome-paciente" required>
+                <label for="nome-paciente">Nome do Paciente</label>
+                <input type="text" id="nome-paciente" required>
 
-            <label for="horario">Horário</label>
-            <input type="text" id="horario" required>
+                <label for="horario">Horário</label>
+                <input type="text" id="horario" required>
 
-            <label for="procedimento">Procedimento</label>
-            <input type="text" id="procedimento" required>
+                <label for="procedimento">Procedimento</label>
+                <input type="text" id="procedimento" required>
 
-            <label for="descricao">Descrição</label>
-            <input type="text" id="descricao" required>
+                <label for="descricao">Descrição</label>
+                <input type="text" id="descricao" required>
 
-            <label for="telefone">Telefone</label>
-            <input type="text" id="telefone" required>
+                <label for="telefone">Telefone</label>
+                <input type="text" id="telefone" required>
 
-            <button onclick="salvar()">Salvar</button>
-            <button onclick="closeModal()">Cancelar</button>
+                <button class="modal-btn" type="submit">Salvar</button>
+                <button class="modal-btn" onclick="closeModal()">Cancelar</button>
+            </form>
         </div>
+      
     </div>
     
     <script src="/src/js/index.js"></script>
